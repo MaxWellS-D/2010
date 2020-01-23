@@ -21,6 +21,10 @@ if(empty($_SESSION['userData'])){
 $user = $_SESSION['userData'];
 
 $stu_id = $user['stu_id'];
+$stu_id = "maxsindeldempcy";
+if($stu_id=="maxsindeldempcy"){
+    $stu_id = "maxsindel-dempcy"
+}
 
 $sql_courses = sprintf("SELECT * FROM courses WHERE stu_id='%s' ", $stu_id);
 $result = $conn->query($sql_courses);
